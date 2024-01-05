@@ -9,10 +9,10 @@ public class StarshipExplorer {
         name=Pname;
         age=Page;           //constructor
 
-        UFOs=new Alien[10];  //step 4: creating array
+        UFOs=new Alien[100];  //step 4: creating array
         blank=new Alien(0,0); //step 6: blank alien to switch around with for sort
 
-            for(int x=0;x<10;x++){  //step 4: filling array
+            for(int x=0;x<UFOs.length;x++){  //step 4: filling array
                 UFOs[x] = new Alien( (int)(50*Math.random()), (int)(20*Math.random()) );
             }
 
@@ -44,7 +44,7 @@ public class StarshipExplorer {
     }
 
     public void displayAliens(){  //step 5: display aliens
-        for(int x=0;x<10;x++){
+        for(int x=0;x< UFOs.length;x++){
             UFOs[x].printInfo();
         }
     }
